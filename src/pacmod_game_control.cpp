@@ -50,7 +50,8 @@ void GameControl::GamepadCb(const sensor_msgs::Joy::ConstPtr& msg)
   try
   {
     // Enable
-    if (controller_->enable() && !pacmod_enabled_rpt_)
+    // if (controller_->enable() && !pacmod_enabled_rpt_)
+    if (controller_->enable())
     {
       enable_cmd_ = true;
       clear_override_cmd_ = true;
