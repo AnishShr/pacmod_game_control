@@ -58,8 +58,8 @@ void GameControl::GamepadCb(const sensor_msgs::Joy::ConstPtr& msg)
     }
 
     // Disable
-    if (controller_->disable() && pacmod_enabled_rpt_)
-    // if (controller_->disable())
+    // if (controller_->disable() && pacmod_enabled_rpt_)
+    if (controller_->disable())
     {
       enable_cmd_ = false;
     }
